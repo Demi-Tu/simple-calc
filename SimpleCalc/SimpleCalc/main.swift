@@ -24,17 +24,22 @@ if arr.count == 1 {
     switch operation {
     case "+":
         result = n1 + n2
+        print("Result: \(result)")
     case "-":
         result = n1 - n2
+        print("Result: \(result)")
     case "*":
         result = n1 * n2
+        print("Result: \(result)")
     case "/":
         result = n1 / n2
-    default:
+        print("Result: \(result)")
+    case "%":
         result = n1 % n2
+        print("Result: \(result)")
+    default:
+        print("Invalid")
     }
-    
-    print("Result: \(result)")
 } else {
     let last = String(arr[arr.count - 1])
     switch last {
@@ -51,13 +56,17 @@ if arr.count == 1 {
         
         print("Result: \(result)")
     case "fact":
-        var answer = Int(String(arr[0]))!
-        while answer > 1 {
-            result *= answer
-            answer -= 1
+        if arr.count != 2 {
+            print("Invalid")
+        } else {
+            var answer = Int(String(arr[0]))!
+            while answer > 1 {
+                result *= answer
+                answer -= 1
+            }
+            
+            print("Result: \(result)")
         }
-        
-        print("Result: \(result)")
     default:
         print("Invalid")
     }
