@@ -5,7 +5,6 @@
 //  Created by AT on 10/10/17.
 //  Copyright © 2017 AT. All rights reserved.
 //
-
 import Foundation
 
 print("Enter an expression separated by returns:")
@@ -15,14 +14,12 @@ let arr = response.components(separatedBy: " ")
 var result = 1
 
 if arr.count == 1 {
-    let num1 = UInt.init(response)!
-    let n1 = Int(num1)
+    let n1 = Int(response)!
     
     let operation = readLine(strippingNewline: true)!
     
     let secondNumber = readLine(strippingNewline: true)!
-    let num2 = UInt.init(secondNumber)!
-    let n2 = Int(num2)
+    let n2 = Int(secondNumber)!
     
     switch operation {
     case "+":
@@ -59,5 +56,3 @@ if arr.count == 1 {
 }
 
 print("Result: \(result)")
-
-
