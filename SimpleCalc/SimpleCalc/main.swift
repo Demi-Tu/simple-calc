@@ -33,26 +33,32 @@ if arr.count == 1 {
     default:
         result = n1 % n2
     }
+    
+    print("Result: \(result)")
 } else {
     let last = String(arr[arr.count - 1])
     switch last {
     case "count":
         result = arr.count - 1
+        
+        print("Result: \(result)")
     case "avg":
         result = 0
         for index in 0...arr.count - 2 {
             result += Int(arr[index])!
         }
         result /= (arr.count - 1)
+        
+        print("Result: \(result)")
     case "fact":
         var answer = Int(String(arr[0]))!
         while answer > 1 {
             result *= answer
             answer -= 1
         }
+        
+        print("Result: \(result)")
     default:
         print("Invalid")
     }
 }
-
-print("Result: \(result)")
